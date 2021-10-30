@@ -1,38 +1,185 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    animation: App-logo-spin infinite 10s linear;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+.App-logo:hover {
+    animation: App-logo-spin infinite 1s linear;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    color: white;
+}
+
+:root {
+    --background-primary: radial-gradient(#404558, #2b2f3a);
+    --background-secondary: linear-gradient(to bottom, #9496a0, #656773);
+    --shadow: black 0 0 0.4rem 0.1rem;
+    --trinary: repeating-linear-gradient(45deg, #2b2f3a 16%, #656773 20%);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    background: var(--trinary);
+    width: 100vw;
+    min-height: 100vh;
+    box-shadow: var(--shadow);
+}
+
+nav {
+    background: var(--background-secondary);
+    background-color: #0575a588;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+    padding: 0 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: black 0 0 0.4rem 0.1rem;
+    width: 100vw;
+    z-index: 100;
+    position: sticky;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    margin: 0 1vw;
+}
+
+.link:hover {
+    color: #2b2f3a;
+}
+
+.img {
+    height: 7vh;
+    width: 7vh;
+    background: no-repeat center center/cover;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home {
+    width: 100vw;
+    min-height: 93vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-cars,
+.inner-users,
+.inner-home {
+    max-width: 1200px;
+    width: 100vw;
+    min-height: 93vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--background-primary);
+    box-shadow: black 0 0 0.4rem 0.1rem;
+    opacity: 0.9;
+}
+
+.card,
+.card-top {
+    width: 95%;
+    height: 20vmin;
+    min-height: 220px;
+    box-shadow: var(--shadow);
+    margin: 1vmin 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7vmin 1vmin;
+}
+
+.mid {
+    height: 10vmin;
+    min-height: 110px;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card>div {
+    width: 20vmax;
+    background: no-repeat center center/cover;
+}
+
+.green {
+    color: limegreen;
+}
+
+.red {
+    color: orangered;
+}
+
+.card-top {
+    height: 5vmin;
+    align-items: center;
+    min-height: 3rem;
+}
+
+.more {
+    line-height: 0.85rem;
+}
+
+.sc {
+    display: inline;
+}
+
+.assign {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    background-color: #7b8191;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: white;
+}
+
+input[type="button"] {
+    background: var(--background-secondary);
+    border-radius: 0.5rem;
+    padding: 0.5rem 3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.column>p {
+    margin: 0;
 }
